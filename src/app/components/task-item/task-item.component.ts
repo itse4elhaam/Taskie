@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component,Input, Output, EventEmitter } from '@angular/core';
 import { Task } from 'src/app/Task';
 
 @Component({
@@ -8,4 +8,14 @@ import { Task } from 'src/app/Task';
 })
 export class TaskItemComponent {
   @Input() task!: Task;
+
+  // ? how does event emitter work? 
+
+  // this is available in the parent now
+  @Output() deleteTaskEvent: EventEmitter<Task> = new EventEmitter()
+
+  // we should have all of the logic related to the service in the parent component
+  deleteTaskHandler(task: Task){
+    this.deleteTaskEvent.emit(task);
+  }
 }

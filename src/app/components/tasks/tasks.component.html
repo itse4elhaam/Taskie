@@ -1,4 +1,4 @@
 <div class="rounded-lg border-2 border-gray-800 p-4">
   <h1 class="text-2xl m-10">Tasks: </h1>
-  <app-task-item *ngFor="let task of tasks" [task]="task"> </app-task-item>
+  <app-task-item *ngFor="let task of tasks" [task]="task" (deleteTaskEvent)="deleteTasks(task)"> </app-task-item>
 </div>
