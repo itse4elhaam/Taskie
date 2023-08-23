@@ -7,6 +7,7 @@ import { Component, Input, Output,EventEmitter } from '@angular/core';
 })
 export class ButtonComponent {
   @Input() text!: string;
+  
   // this is a custom event and can be referenced anywhere we use the app-button
   @Output() btnClick = new EventEmitter();
 
