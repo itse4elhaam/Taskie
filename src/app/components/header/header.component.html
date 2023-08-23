@@ -1,0 +1,9 @@
+<header class="flex m-4 justify-between">
+    <h1 class="text-5xl font-bold font-mono uppercase">
+        {{title}}
+    </h1>
+
+    <!-- we can create custom events and then call them from here  -->
+    <!-- we would want to send in some props like colors and text if we are to reuse this button -->
+    <app-button text="Add" (btnClick) = "toggleAddTask()"></app-button> 
+</header>
