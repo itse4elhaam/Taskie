@@ -32,14 +32,14 @@ A simple Task Manager application built using Angular and Tailwind CSS. This app
 
 # Technologies Used
 
-    Angular: A powerful framework for building web applications.
-    Tailwind CSS: A utility-first CSS framework for quickly styling your app.
-    TypeScript: A superset of JavaScript, used to write Angular components.
+- Angular: A powerful framework for building web applications.
+- Tailwind CSS: A utility-first CSS framework for quickly styling your app.
+- TypeScript: A superset of JavaScript, used to write Angular components.
 
 # Directory Structure
 
-    src/app/components: Contains the Angular components used in the app.
-    src/app/services: Contains the services that handle data and app logic.
+- src/app/components: Contains the Angular components used in the app.
+- src/app/services: Contains the services that handle data and app logic.
 
 # Contributing
 
