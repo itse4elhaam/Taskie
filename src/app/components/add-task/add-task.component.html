@@ -1,0 +1,49 @@
+<!-- name of the input and the ngModel should be the same -->
+<form *ngIf="showAddTask" class="max-w-md mx-auto p-6 bg-red-100 rounded-lg shadow-md" (ngSubmit)="addTaskFormSubmit()">
+  <div class="mb-4">
+    <label class="block text-red-700 text-sm font-bold mb-2" for="text">
+      Task Text
+    </label>
+    <input
+      class="w-full px-3 py-2 border border-red-300 rounded-lg focus:outline-none focus:ring focus:border-red-400"
+      type="text"
+      [(ngModel)]="text"
+      id="text"
+      name="text"
+      placeholder="Enter task text..."
+    />
+  </div>
+  <div class="mb-4">
+    <label class="block text-red-700 text-sm font-bold mb-2" for="day">
+      Day and Time
+    </label>
+    <input
+      class="w-full px-3 py-2 border border-red-300 rounded-lg focus:outline-none focus:ring focus:border-red-400"
+      type="text"
+      [(ngModel)] = "day"
+      id="day"
+      name="day"
+      placeholder="Enter day and time..."
+    />
+  </div>
+  <div class="mb-4">
+    <label class="flex items-center text-red-700 text-sm font-bold">
+      <input
+        class="mr-2 leading-tight text-red-400"
+        type="checkbox"
+      [(ngModel)] = "reminder"
+        id="reminder"
+        name="reminder"
+      />
+      <span class="select-none">Set Reminder</span>
+    </label>
+  </div>
+  <div class="flex justify-center">
+    <button
+      class="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 focus:outline-none focus:ring focus:border-red-400"
+      type="submit"
+    >
+      Add Task
+    </button>
+  </div>
+</form>

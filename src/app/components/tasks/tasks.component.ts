@@ -14,22 +14,35 @@ export class TasksComponent implements OnInit {
 
   // void means it doesn't return anything
 
-  // normally this is done using observables 
+  // normally this is done using observables
   // because we are using async stuff to get data from the backend
   // this.tasks = this.taskService.getTasks();
 
   ngOnInit(): void {
     // .subscribe here is like .then
-    this.taskService.getTasks().subscribe((tasks) =>  this.tasks = tasks)
+    this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
   }
 
-  deleteTasks(task: Task){
+  deleteTasksService(task: Task) {
+    this.taskService
+      .deleteTask(task)
+      .subscribe(
+        () => (this.tasks = this.tasks.filter((t) => t.id !== task.id))
+      );
+  }
 
-      this.taskService.deleteTask(task).subscribe(() => (
-        this.tasks = this.tasks.filter((t) => t.id !== task.id)
-      ))
+  toggleReminderService(task: Task) {
+    task.reminder = !task.reminder;
 
-      console.log("Remaining Tasks")
-      console.log(this.tasks)
+    this.taskService.toggleTaskReminder(task).subscribe();
+  }
+
+  addTaskService(task: Task) {
+    console.log('coming from the parent');
+    console.log(task);
+
+    this.tasks.push(task);
+
+    this.taskService.addNewTask(task).subscribe();
   }
 }
