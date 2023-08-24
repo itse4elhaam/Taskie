@@ -1,27 +1,50 @@
-# TaskTracker
+# Taskie
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+![Taskie](./screenshot.png)
 
-## Development server
+A simple Task Manager application built using Angular and Tailwind CSS. This app allows users to add, delete, and toggle reminders on tasks.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- Add tasks with a title and optional reminder
+- Delete tasks
+- Toggle reminder for tasks
+- Responsive design with Tailwind CSS
+- Angular components for easy management
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+1. Clone the repository:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```git clone git@github.com:itse4elhaam/Taskie.git```
 
-## Running unit tests
+2. Navigate to the the folder
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```cd ./Taskie```
 
-## Running end-to-end tests
+3. Install the dependencies
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```npm i```
 
-## Further help
+4. Run the server locally
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```ng serve```
+
+# Technologies Used
+
+    Angular: A powerful framework for building web applications.
+    Tailwind CSS: A utility-first CSS framework for quickly styling your app.
+    TypeScript: A superset of JavaScript, used to write Angular components.
+
+# Directory Structure
+
+    src/app/components: Contains the Angular components used in the app.
+    src/app/services: Contains the services that handle data and app logic.
+
+# Contributing
+
+Contributions are welcome! If you find any issues or have suggestions, feel free to open an issue or create a pull request.
+
+# License
+
+This project is licensed under the MIT License.
